@@ -33,4 +33,9 @@ Notes:
 
 6)  After running the programs, run cleanup to remove test files (e.g., sqlite).
 
+7)  If errors like cannot find package "runtime", you may need to unset
+    the GO_ROOT (I had it setup for a custom build then switched to 
+    the golang-go Ubuntu package).
+
+
 
