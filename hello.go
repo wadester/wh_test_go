@@ -1,10 +1,10 @@
 /*
  * Module:   hello.go
- * Purpose:  example hello
+ * Purpose:  example hello world in GO
  * Date:     9/28/2015
  * Notes:
  * 1) To build:
- *      bo build hello.go
+ *      go build hello.go
  * 2) Ref:
  *      https://tour.golang.org/welcome
 */
@@ -15,6 +15,7 @@ import (
 	"time"
 )
 
+// main function
 func main() {
 	fmt.Println("Welcome to GO!")
 

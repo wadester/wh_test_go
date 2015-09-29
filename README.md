@@ -1,4 +1,4 @@
-wh_test_pgo
+wh_test_go
 ==========
 WH Test Go Repository -- GO test files
 
@@ -27,9 +27,10 @@ Notes:
 
 3)  License for ALL files is GPL, see LICENSE.
 
-4)  Please e-mail me with any updates, suggesions, etc.  
+4)  Please e-mail me with any updates, suggesions, etc.
 
 5)  Programs include TBD.
 
 6)  After running the programs, run cleanup to remove test files (e.g., sqlite).
+
 
