@@ -5,7 +5,7 @@
 # Date:     9/25/2015
 #
 
-BINS=hello go_func go_func1
+BINS=hello go_func go_func1 go_vars
 
 all:  $(OBJS)
 	$(MAKE) $(BINS)
@@ -19,6 +19,9 @@ go_func:  go_func.go
 
 go_func1:  go_func1.go
 	go build go_func.go 
+
+go_vars: go_vars.go
+	go build go_vars.go
 
 clean::
 	rm -f $(BINS)
