@@ -4,19 +4,20 @@
  * Date:     9/20/2015
  * Notes:
  * 1) To build:
- *      bo build go_vars.go
+ *      go build go_vars.go
  * 2) Ref:  https://golang.org/pkg/fmt/
  *          http://www.dotnetperls.com/convert-go
 */
 
 package main
 
+// section for imports
 import (
 	"fmt"
 	"math/cmplx"
 )
 
-// define vars
+// define vars -- note we can make our own section for vars!
 var (
 	fa,fb,fc = true, false, true  // auto type = bool
 	s, x, y, z = "test", 1, 2, 3  // can be different types
@@ -26,6 +27,7 @@ var (
 
 // print them using %T for type of the value, and %v for value in default format
 func main() {
+	fmt.Printf("Simple types and their values using %%T(%%v)\n")
 	const mypi = 3.1415
 	const f = "%T(%v)\n"
 

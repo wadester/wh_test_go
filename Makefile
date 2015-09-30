@@ -23,6 +23,9 @@ go_func1:  go_func1.go
 go_vars: go_vars.go
 	go build go_vars.go
 
+go_loop: go_loop.go
+	go build go_loop.go
+
 clean::
 	rm -f $(BINS)
 
