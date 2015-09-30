@@ -1,6 +1,6 @@
 /*
  * Module:   go_loop.go
- * Purpose:  example GO loops 
+ * Purpose:  example GO loops, if, switch, etc. (flow control)
  * Date:     9/30/2015
  * Notes:
  * 1) To build:
@@ -46,6 +46,8 @@ func main() {
 			fmt.Printf("jj=%d\n", jj)
 		}
 	}
+
+	/* todo:  add switch */
 
 }
 
