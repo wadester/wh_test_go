@@ -5,7 +5,7 @@
 # Date:     9/25/2015
 #
 
-BINS=hello go_func go_func1 go_vars
+BINS=hello go_func go_func1 go_vars go_loop
 
 all:  $(OBJS)
 	$(MAKE) $(BINS)
