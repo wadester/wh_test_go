@@ -5,27 +5,18 @@
 # Date:     9/25/2015
 #
 
-BINS=hello go_func go_func1 go_vars go_loop
+# object files to build, source is same name + ".go"
+BINS=hello go_func go_func1 go_vars go_loop go_ptr
 
+# all rule to build all object files listed above
 all:  $(OBJS)
 	$(MAKE) $(BINS)
 
+# go build rule, single files only
+%: %.go
+	go build $<
 
-hello:  hello.go
-	go build hello.go
-
-go_func:  go_func.go
-	go build go_func.go
-
-go_func1:  go_func1.go
-	go build go_func.go 
-
-go_vars: go_vars.go
-	go build go_vars.go
-
-go_loop: go_loop.go
-	go build go_loop.go
-
+# cleanup rule
 clean::
 	rm -f $(BINS)
 
