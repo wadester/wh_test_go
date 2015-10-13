@@ -6,8 +6,8 @@
 #
 
 # object files to build, source is same name + ".go"
-BINS=hello go_func go_func1 go_vars go_loop go_ptr \
-	go_struct go_map go_funcs go_method
+BINS=hello exercise-slices go_func go_func1 go_vars \
+        go_loop go_ptr go_struct go_map go_funcs go_method
 
 # all rule to build all object files listed above
 all:  $(OBJS)

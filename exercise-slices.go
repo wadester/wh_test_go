@@ -1,6 +1,14 @@
-// exercise-slices.go
-// -- uncomment out the import and the pic.Show
-// -- note use of two calls to make to allocate
+/*
+ * Module:   exercise-slices.go
+ * Purpose:  Excecise for slices from GO tutorial
+ * Date:     9/29/2015
+ * Notes:
+ * 1) To build:
+ *      go build exercise-slices.go
+ * 2) Ref:  GO tutorial
+ *    -- uncomment out the import and the pic.Show
+ *    -- note use of two calls to "make()" to allocate the array
+ */
 
 package main
 
@@ -23,7 +31,7 @@ func Pic(dx, dy int) [][]uint8 {
 	}
 	return(v)	
 }
-
+ 
 func main() {
 	// pic.Show(Pic)
 	x := 128
