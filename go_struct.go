@@ -1,11 +1,11 @@
 /*
  * Module:   go_struct.go
  * Purpose:  go structures, arrays, and operators
- * Date:     10/5/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_struct.go
- * 2) Ref:
+ * 2) Ref:  
  *
 */
 
@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// define a 4d space-time structure
+// define a 4d structure
 type dim4 struct {
 	X int
 	Y int
@@ -33,7 +33,7 @@ var (
 )
 
 func main() {
-	fmt.Println("go_struct.go:  go struct example")
+	fmt.Println("go_struct:  go struct example")
 
 	a.X = 1  // "." operator for member access
 	a.Y = 2
@@ -83,6 +83,4 @@ func main() {
 	for i,v := range bb {
 		fmt.Printf("i=%d V=%d\n", i, v)
 	}
-		
-
 }

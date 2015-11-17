@@ -1,7 +1,7 @@
 /*
  * Module:   go_websvr.go
  * Purpose:  go simple web server
- * Date:     ? (examples), 10/26/2016 WWH
+ * Date:     ? (examples), N/A WWH
  * Notes:
  * 1) To build:
  *      go build go_websvr.go
@@ -23,7 +23,7 @@ type Hello struct{}
 func (h Hello) ServeHTTP(
 	w http.ResponseWriter,
 	r *http.Request) {
-	fmt.Fprint(w, "<H1>Hello</H1>Test 1, 2, 3!")
+	fmt.Fprint(w, "<HTML><H1>Hello</H1><BODY>Test 1, 2, 3!</BODY></HTML>")
 }
 
 // main function, define host and port

@@ -1,7 +1,7 @@
 /*
  * Module:   go_reader1.go
  * Purpose:  basic IO reader based on examples in tutorial
- * Date:     10/20/2015 
+ * Date:     ?, N/A WWH mods
  * Notes:
  * 1) To build:
  *      go build go_reader1.go
@@ -17,6 +17,8 @@ import (
 )
 
 func main() {
+	fmt.Printf("go_reader1:  Go Reader example from tutorial\n")
+
 	r := strings.NewReader("Hello, Reader!")
 
 	b := make([]byte, 8)

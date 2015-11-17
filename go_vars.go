@@ -1,7 +1,7 @@
 /*
  * Module:   go_vars.go
- * Purpose:  variable declarations
- * Date:     9/20/2015
+ * Purpose:  variable declarations in GO
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_vars.go
@@ -27,7 +27,7 @@ var (
 
 // print them using %T for type of the value, and %v for value in default format
 func main() {
-	fmt.Printf("Simple types and their values using %%T(%%v)\n")
+	fmt.Printf("go_vars:  Simple types and their values using %%T(%%v)\n")
 	const mypi = 3.1415
 	const f = "%T(%v)\n"
 

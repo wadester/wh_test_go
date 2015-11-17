@@ -1,7 +1,7 @@
 /*
  * Module:   go_func.go
  * Purpose:  simple examples of functions in go
- * Date:     9/29/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_func.go
@@ -23,6 +23,8 @@ func add(x int, y int) int {
 
 // main function
 func main() {
+	fmt.Println("go_func:  Go function examples\n")
+
 	var x int
 	var y int
 	x=100

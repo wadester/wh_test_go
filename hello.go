@@ -1,7 +1,7 @@
 /*
  * Module:   hello.go
  * Purpose:  example hello world in GO
- * Date:     9/28/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build hello.go
@@ -23,7 +23,7 @@ import (
 
 // main function
 func main() {
-	fmt.Println("Welcome to GO!")
+	fmt.Println("hello:  Welcome to GO!")
 	
 	fmt.Println("The time is", time.Now())
 	rand.Seed(2)

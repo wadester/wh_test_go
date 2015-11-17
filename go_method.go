@@ -1,13 +1,15 @@
 /*
  * Module:   go_method.go
- * Purpose:  demonstrate GO methods
- * Date:     10/07/2015
+ * Purpose:  demonstrate Go methods 
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_method.go
  * 2) Ref:  https://tour.golang.org/methods/1
- * 3) GO does not have objects but does have methods on structs
- *    and these can be defined only on any times defined in my pgm.
+ * 3) Go does not have objects but does have methods on structs
+ * 4) Go receivers can be pointer or value.  Pointer receivers avoid
+ *    copying and can change the receiving structure.
+ *     
  *
 */
 
@@ -18,14 +20,14 @@ import (
 	"math"
 )
 
-// interface for the Person structure
-// can be used with anything that implements these methods....
+// Interface for the Person structure.
+// Can be used with anything that implements these methods....
 type Aperson interface {
 	Update_Name(string)
 	Update_Loc(lat, lon float64)
 }
 
-// simple interface implementing ToInt only
+// Simple interface implementing ToInt only.
 type Ati interface {
 	ToInt() int
 }
@@ -39,38 +41,43 @@ type Person struct {
 	lon  float64
 }
 
-// create a method on the structure to default to a location
-// this is a pointer receiver and it is often used as it 
-// prevents the copying data and it can modify the input
+// Create a method on the structure to default to a location.
+// This is a pointer receiver and it is often used as it 
+// prevents copying data and it can modify the input.
 func (p *Person) Update_Loc(lat, lon float64) {
 	p.lat = lat
 	p.lon = lon
 }
 
-// second method
+// Second method, again using pointer as we update the struct.
 func (p *Person) Update_Name(n string) {
 	p.name = n
 }
 
-// define a stringer for the Person -- how object is presented as a string
+// Define a stringer for the Person.
+// This defines how object is presented as a string.
+// This can be by value as we don't change the struct.
 func (p Person) String() string {
 	return fmt.Sprintf("%v %v %v %v %v years (%v, %v)",
 		p.name, p.addr, p.city, p.zip, p.age, p.lat, p.lon)
 }
 
-// define ToInt for the Person structure
+// Define ToInt for the Person structure
 func (p Person) ToInt() int {
 	return p.age
 }
 
-// define a float type and a method on it
+// Define a float type and a method on it, in this case make it an int
 type my_float float64
 
 func (f my_float) ToInt() int {
 	return int(f)
 }
 
+// main function:
 func main() {
+	fmt.Println("go_method:  Go methods example")
+
 	p := &Person{"Joe", "123 St", "Anytown", 123456, 21, 45.0, -77.0}
 	fmt.Println("Person: ", p)
 	p.Update_Loc(1.0, 2.0)
@@ -80,7 +87,7 @@ func main() {
 	i := f.ToInt()
 	fmt.Println("F=", f, "I=", i)
 
-	// use the interface
+	// use the first interface
 	var a Aperson
 	a = p
 	fmt.Println("A=", a)
@@ -92,5 +99,4 @@ func main() {
 	fmt.Println("B assigned from p=", b, b.ToInt())
 	b = f
 	fmt.Println("B assigned from f=", b, b.ToInt())
-
 }

@@ -1,7 +1,7 @@
 /*
  * Module:   go_ptr.go
  * Purpose:  go pointers
- * Date:     10/2/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_ptr.go
@@ -22,9 +22,8 @@ var (
 )
 
 func main() {
-	fmt.Println("go_ptr.go:  go pointer example")
+	fmt.Println("go_ptr:  Go pointer example")
 
-	
 	p2 := &i  // pointer to i, auto declared
 	p1 = p2
 	fmt.Printf("I=%d, *p1=%d, *p2=%d\n", i, *p1, *p2)

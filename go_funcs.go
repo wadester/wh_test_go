@@ -1,7 +1,7 @@
 /*
  * Module:   go_funcs.go
  * Purpose:  go functional programming misc
- * Date:     10/5/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_funcs.go
@@ -31,7 +31,7 @@ func adder() func(int, int) int {
 }
 
 func main() {
-	fmt.Println("go_funcs.go:  test of go functional programming")
+	fmt.Println("go_funcs:  test of Go functional programming")
 
 	
 	fmt.Println("Test of variable equal to a func")

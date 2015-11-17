@@ -1,7 +1,7 @@
 /*
  * Module:   exercise-slices.go
  * Purpose:  Excecise for slices from GO tutorial
- * Date:     9/29/2015
+ * Date:     based on tutorial, N/A WWH mods
  * Notes:
  * 1) To build:
  *      go build exercise-slices.go
@@ -33,6 +33,8 @@ func Pic(dx, dy int) [][]uint8 {
 }
  
 func main() {
+	fmt.Println("exercise-slices:  Go slices exercise")
+
 	// pic.Show(Pic)
 	x := 128
 	y := 256

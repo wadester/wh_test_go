@@ -1,7 +1,7 @@
 /*
  * Module:   go_map.go
  * Purpose:  go maps
- * Date:     10/5/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_map.go
@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// define a 4d space-time structure
+// define a 4D structure
 type dim4 struct {
 	X, Y, Z int
 	t float64
@@ -28,6 +28,8 @@ var m3 = map[string]dim4{
 }
 
 func main() {
+	fmt.Println("go_map:  Go example of maps")
+
 	m1 = make(map[int]dim4)  // must make first
 	m1[1234] = dim4{1,2,3,4.0}
 	m1[1234] = dim4{2,3,4,5.0}

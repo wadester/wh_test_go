@@ -1,7 +1,7 @@
 /*
  * Module:   go_func1.go
  * Purpose:  second simple examples of functions in go
- * Date:     9/29/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_func1.go
@@ -23,6 +23,8 @@ func swap(x, y string) (string, string) {
 
 // Main function
 func main() {
+	fmt.Println("go_func1:  Go simple functions\n")
+
 	var x string
 	y := string("World") // short dec form
 	x="Hello"

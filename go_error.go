@@ -1,7 +1,7 @@
 /*
  * Module:   go_error.go
  * Purpose:  GO Error processing test
- * Date:     10/13/2015
+ * Date:     N/A
  * Notes:
  * 1) To build:
  *      go build go_error.go
@@ -43,7 +43,7 @@ func run() error {
 // Main function, calls the run() and checks for errors
 func main() {
 	fmt.Println("go_error.go:  Error examples")
-	fmt.Println("Test dummy function returning error")
+	fmt.Println("Test dummy function returning error (should report error)")
 
 	// precursor   ; if test   -- if with initialization
 	if err := run(); err != nil {
@@ -51,7 +51,7 @@ func main() {
 	}
 
 	istr:="42"
-	fmt.Println("Trying to convert", istr)
+	fmt.Println("Trying to convert", istr, " (should be OK)")
 	i, err := strconv.Atoi(istr)
 	if err != nil {
 		fmt.Printf("couldn't convert number: %v\n", err)
@@ -59,7 +59,7 @@ func main() {
 	fmt.Println("Converted integer:", i)
 
 	istr="xx"
-	fmt.Println("Trying to convert", istr)
+	fmt.Println("Trying to convert", istr, " (should fail)")
 	i, err = strconv.Atoi(istr)
 	if err != nil {
 		fmt.Printf("couldn't convert number: %v\n", err)
